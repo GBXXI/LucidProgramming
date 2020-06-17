@@ -26,8 +26,9 @@ def is_palindrome(string):
         while not string[j].isalnum() and i<j:
             j -= 1
         if string[i].lower() != string[j].lower():
-            # print(string[:(i+1)], string[j]) # Personal note to see which 
-                                               # character is different.
+            # print(f'The differnce is {string[:(i+1)]}, on character: {string[j]})
+                                            # Personal note to see which 
+                                            # character is different.
             return False
         i += 1
         j -= 1
