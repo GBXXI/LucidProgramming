@@ -1,7 +1,8 @@
 
 # %% [markdown]
 # Binary Search algorithm in Python.<br>
-# Binary Search is a technique that allows you to search an ordered list of elements very efficiently using a divide-and-conquer strategy
+# Binary Search is a technique that allows you to search an ordered list of 
+# elements very efficiently using a divide-and-conquer strategy
 
 # %% [markdown]
 # Data
