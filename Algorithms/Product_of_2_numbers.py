@@ -16,5 +16,7 @@ def recursive_multiply(x, y):
     return x + recursive_multiply(x, y-1)
 
 # %% [codecell]
-print(recursive_multiply(x, y))
-print(recursive_multiply(4, 5))
+if __name__ == "__main__":
+    print(recursive_multiply(x, y))
+    print(recursive_multiply(4, 5))
+    print(recursive_multiply(7,0))

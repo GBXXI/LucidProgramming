@@ -35,11 +35,12 @@ def first_elem_rept(first_element, repetion):
     s = first_element
     for _ in range(repetion-1):
         s = lns_seq(s)
-    print(f'{str(first_element)} + {s}')
+    # print(f'{str(first_element)} + {s}')
     return print(s)
 
 # %% [codecell]
-s = "1211"    
-lns_seq(s)
-first_elem_rept("d", 5)
+if __name__ == "__main__":
+    s = "1211"    
+    lns_seq(s)
+    first_elem_rept("d", 5)
         
