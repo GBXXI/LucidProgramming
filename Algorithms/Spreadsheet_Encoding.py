@@ -37,16 +37,17 @@ dataset = {
 
 # %% [markdown]
 # Personal solution, WRONG!!!
+# Works only for sigle or double character cells.
 # %% [codecell]
 def tranform(cell, dataset):
     
     shifter = 0
     if len(cell) <= 1:
-        print(dataset[f'{cell.upper()}'])
+        return(dataset[f'{cell.upper()}'])
     else:
         for _ in cell[0:-1]:
             shifter += dataset['Z'] * dataset[f'{_.upper()}']
-        print(f'{shifter + dataset[f"{cell[-1].upper()}"]}')
+        return(f'{shifter + dataset[f"{cell[-1].upper()}"]}')
 
 # %% [codecell]
 def transform_base26(cell, dataset):
@@ -59,5 +60,23 @@ def transform_base26(cell, dataset):
     return base
 
 # %% [codecell]
-print(transform_base26('aa', dataset))
-print(transform_base26('ZZ', dataset))
+if __name__ == "__main__":
+    # test_list = [
+        # 'aa',
+        # 'ZZ',
+        # 'ab',
+        # 'Ac',
+        # 'Ca',
+        # 'K',
+        # 'Kna',
+        # 'lk',
+        # 'p',
+        # 'ap'
+    # ]
+    
+    test_list = ['amj']
+
+    for element in test_list:
+        print(transform_base26(element, dataset))
+        print(tranform(element, dataset))
+        print(f'test: {element} \n')
