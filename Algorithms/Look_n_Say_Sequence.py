@@ -4,7 +4,7 @@
 
 # The sequence starts with the number 1:<br>
 #                1<br>
-# We then say how many of each integer exists in the sequence to 
+# We then say how many of each integer exists in the sequence to
 # generate the next term.<br>
 # For instance, there is "one 1". This gives the next term:<br>
 #                1<br>
@@ -23,7 +23,7 @@ def lns_seq(seq):
     i = 0
     while i < len(seq):
         count = 1
-        while i + 1 < len(seq)   and seq[i] == seq[i+1]:
+        while i + 1 < len(seq) and seq[i] == seq[i+1]:
            i += 1
            count += 1
         occ_list.append(str(count)+seq[i])
@@ -31,16 +31,14 @@ def lns_seq(seq):
     return "".join(occ_list)
 
 # %% [codecell]
-def first_elem_rept(first_element, repetion):
+def first_elem_rept(first_element, repetition):
     s = first_element
-    for _ in range(repetion-1):
+    for _ in range(repetition-1):
         s = lns_seq(s)
     # print(f'{str(first_element)} + {s}')
     return print(s)
 
 # %% [codecell]
 if __name__ == "__main__":
-    s = "1211"    
-    lns_seq(s)
+    s = "1211"
     first_elem_rept("d", 5)
-        

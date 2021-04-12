@@ -61,21 +61,20 @@ def transform_base26(cell, dataset):
 
 # %% [codecell]
 if __name__ == "__main__":
-    # test_list = [
-        # 'aa',
-        # 'ZZ',
-        # 'ab',
-        # 'Ac',
-        # 'Ca',
-        # 'K',
-        # 'Kna',
-        # 'lk',
-        # 'p',
-        # 'ap'
-    # ]
+    test_list = [
+        'aa',
+        'ZZ',
+        'ab',
+        'Ac',
+        'Ca',
+        'K',
+        'Kna',
+        'lk',
+        'p',
+        'ap',
+        'amj'
+    ]
     
-    test_list = ['amj']
-
     for element in test_list:
         print(transform_base26(element, dataset))
         print(tranform(element, dataset))

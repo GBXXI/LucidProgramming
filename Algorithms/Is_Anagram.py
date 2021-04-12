@@ -1,7 +1,7 @@
 
 # %% [markdown]
 # Problem:<br>
-#  Two strings. Check if they are anagrams. 
+#  Two strings. Check if they are anagrams.
 
 # %% [markdown]
 # Data.
@@ -27,7 +27,7 @@ def gbxxi_solution(text1, text2):
 # %% [codecell]
 def lucidprogramming_solution1(text1, text2):
     ''' Prequisite that no sumbols are in our strings.
-        Requires n log n time (since any comparison based sorting algorithm 
+        Requires n log n time (since any comparison based sorting algorithm
         requires n log n time to sort).
         '''
 
@@ -44,10 +44,10 @@ def lucidprogramming_solution2(text1, text2):
     text2 = text2.replace(" ", "").lower()
     # Hash table.
     hash_table = dict()
-    
+
     if len(text1) != len(text2):
         return False
-    
+
     # Hash table entries conditionals.
 
     for letter in text1:
@@ -55,7 +55,7 @@ def lucidprogramming_solution2(text1, text2):
             hash_table[letter] += 1
         else:
             hash_table[letter] = 1
-            
+
     for letter in text2:
         if letter in hash_table:
             hash_table[letter] -= 1
